@@ -1,14 +1,14 @@
 export class CD {
-    id! : Number;
-    title! : String;
-    author! : String;
-    price! : Number;
-    thumbnail! : String;
+    id! : number;
+    title! : string;
+    author! : string;
+    price! : number;
+    thumbnail! : string;
     dateDeSortie! : Date;
-    quantite! : Number;
-    onSale? : Boolean;
+    quantite! : number;
+    onSale? : boolean;
 
-    constructor(id : Number, title : String, author : String, price : Number, thumbnail : String, dateDeSortie : Date, quantite : Number, onSale? : Boolean) {
+    constructor(id : number, title : string, author : string, price : number, thumbnail : string, dateDeSortie : Date, quantite : number, onSale? : boolean) {
         this.id = id;
         this.title = title;
         this.author = author;
