@@ -1,0 +1,66 @@
+.form {
+    display: grid;
+    grid-template-columns: 50% 49% 50%;
+    grid-column-gap: 15px;
+    margin: 10px 30px 10px 30px;
+    section {
+        box-sizing: border-box;
+        box-shadow: lightgrey 4px 4px 20px;
+        padding: 15px;
+    }    
+    .saisieForm {
+        text-align: center;
+        margin-bottom: 0;
+        h2 {
+            text-align: center;
+        }
+        .formGroup {
+            display: grid;
+            margin: 15px 200px;
+            label {
+                margin: 0 5px 2px 5px;
+                text-align: left;
+            }
+            input {
+                border-radius: 5px;
+                border-color: rgb(20, 0, 105);
+            }
+        }
+        button {
+            border-radius: 8px;
+            color: white;
+            background-color: rgb(10, 0, 120);
+            border: none;
+            width: 100px;
+            height: 20px;
+            &:active {
+            background-color: rgb(0, 150, 255);
+            transform: translate(1px, 1px);
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 0;
+    }
+    .apercuCard {
+        box-sizing: border-box;
+        padding: 20px 30px;
+        box-shadow: lightgrey 4px 4px 20px;
+        background-color: rgb(0, 140, 255);
+        display: grid;
+        margin: 10px 150px 10px 150px;
+        border-radius: 30px;
+        img{
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 0;
+        }
+        p {
+            font-weight: 300;
+            font-size: 16px;
+        }
+    }
+}

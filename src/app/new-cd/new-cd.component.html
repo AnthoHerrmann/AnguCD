@@ -1,0 +1,45 @@
+<div class="form">
+    <section class="saisieForm">
+        <h2>Formulaire d'ajout de CD</h2>
+        <form [formGroup]="formulaire">
+            <div class="formGroup">
+                <label for="title">Titre</label>
+                <input type="text" class="form-control" id="title" formControlName="title"/>
+            </div>
+            <div class="formGroup">
+                <label for="author">Auteur</label>
+                <input type="text" class="form-control" id="author" formControlName="author"/>
+            </div>
+            <div class="formGroup">
+                <label for="price">Prix</label>
+                <input type="number" class="form-control" id="price" formControlName="price"/>
+            </div>
+            <div class="formGroup">
+                <label for="thumbnail">Vignette</label>
+                <input type="" class="form-control" id="thumbnail" formControlName="thumbnail"/>
+            </div>
+            <div class="formGroup">
+                <label for="dateDeSortie">Date de sortie</label>
+                <input type="date" class="form-control" id="dateDeSortie" formControlName="dateDeSortie"/>
+            </div>
+            <div class="formGroup">
+                <label for="quantite">Quantité</label>
+                <input type="number" class="form-control" id="quantite" formControlName="quantite"/>
+            </div>
+            <div class="submitForm">
+                <button class="button" type="submit" [disabled]="formulaire.invalid" (click)="soumissionForm()">Valider</button>
+            </div>
+        </form>
+    </section>
+    <section class="apercuCD">
+        <h2>Aperçu du CD</h2>
+        <div class="apercuCard" *ngIf="currentCD !== undefined">
+            <h3>{{currentCD.title | uppercase}}</h3>
+            <p>Sortie le : {{currentCD.dateDeSortie | date: 'dd/MM/yyyy'}}</p>
+            <p>Auteur / Groupe : {{currentCD.author}}</p>
+            <p>Prix : {{currentCD.price | currency: 'EUR'}}</p>
+            <p>Quantité : {{currentCD.quantite}}</p>
+            <img [src]="currentCD.thumbnail" alt="{{currentCD.title}}">
+        </div>
+    </section>
+</div>
