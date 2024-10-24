@@ -16,12 +16,13 @@
         }
         .formGroup {
             display: grid;
-            margin: 15px 200px;
+            margin: 20px 0;
             label {
-                margin: 0 5px 2px 5px;
                 text-align: left;
+                margin-left: 260px;
             }
             input {
+                width: 250px;
                 border-radius: 5px;
                 border-color: rgb(20, 0, 105);
             }
