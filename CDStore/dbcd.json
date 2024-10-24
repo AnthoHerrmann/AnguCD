@@ -1,0 +1,23 @@
+{  
+    "CD": [
+        {
+            "id" : 1,
+            "title" : "The DarkSide of the Moon",
+            "author" : "Pink Floyd",
+            "price" : 10,
+            "thumbnail" : "https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/loisirs/musique/dossiers/albums-a-ecouter-absolument/the-dark-side-of-the-moon-des-pink-floyd-1973/83779787-1-fre-FR/The-Dark-Side-of-the-Moon-des-Pink-Floyd-1973.jpg",
+            "dateDeSortie" : "1973-03-01T00:00:00.000Z",
+            "quantite" : 1
+        },
+        {
+            "id" : 2,
+            "title" : "Pulse",
+            "author" : "Pink Floyd",
+            "price" : 10,
+            "thumbnail" : "https://pinkfloydhyperbase.dk/illu/covers/pulse.jpg",
+            "dateDeSortie" : "1974-04-11T00:00:00.000Z",
+            "quantite" : 2,
+            "onSale" : true
+        }
+    ]    
+}
