@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CD } from '../models/cd.model';
+import { CDsService } from '../services/cds.service';
 
 @Component({
   selector: 'app-new-cd',
@@ -13,7 +14,8 @@ export class NewCDComponent implements OnInit {
   formulaire!: FormGroup;
   currentCD!: CD;
 
-  constructor(private formBuilder: FormBuilder) {}
+
+  constructor(private cdService: CDsService, private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     this.thumbnailRegex = new RegExp('https?:\/\/.*\.(?:png|jpg|jpeg|gif|svg|webp)$');
@@ -29,19 +31,17 @@ export class NewCDComponent implements OnInit {
 
     this.formulaire.valueChanges.subscribe((formValue) => {
       this.currentCD = {
-        id: 0,
         title: formValue.title,
         author: formValue.author,
         price: formValue.price,
         thumbnail: formValue.thumbnail,
         dateDeSortie: formValue.dateDeSortie,
         quantite: formValue.quantite,
-        onSale: false
       };
     });
   }
 
   soumissionForm(): void {
-
+    this.cdService.addCD(this.currentCD);
   }
 }

@@ -1,5 +1,5 @@
 export class CD {
-    id! : number;
+    id? : number;
     title! : string;
     author! : string;
     price! : number;
@@ -8,8 +8,7 @@ export class CD {
     quantite! : number;
     onSale? : boolean;
 
-    constructor(id : number, title : string, author : string, price : number, thumbnail : string, dateDeSortie : Date, quantite : number, onSale? : boolean) {
-        this.id = id;
+    constructor(title : string, author : string, price : number, thumbnail : string, dateDeSortie : Date, quantite : number, onSale? : boolean, id? : number) {
         this.title = title;
         this.author = author;
         this.price = price;
@@ -18,5 +17,9 @@ export class CD {
         this.quantite = quantite;
         if (onSale !== undefined)
             this.onSale = onSale;
+        else
+            this.onSale = false;
+        if (id !== undefined)
+            this.id = id;
     }
 }

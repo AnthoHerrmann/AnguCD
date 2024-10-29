@@ -18,12 +18,12 @@ export class CDsService {
     return this.http.get<CD>('http://localhost:3000/CD/' + id);
   }
 
-  addCD(cd: CD): Observable<CD> {
-    return this.http.post<CD>('http://localhost:3000/CD/', cd);
+  addCD(cd: CD): Observable<void> {
+    return this.http.post<void>('http://localhost:3000/CD/', cd);
   }
 
-  updateCD(cd: CD): Observable<CD> {
-    return this.http.put<CD>('http://localhost:3000/CD/' + cd.id, cd);
+  updateCD(cd: CD): Observable<void> {
+    return this.http.put<void>('http://localhost:3000/CD/' + cd.id, cd);
   }
 
   deleteCD(id: number): Observable<void> {
